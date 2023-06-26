@@ -23,7 +23,8 @@ void loop() {
 }
 ```
 - **Test the Ardafruit Io by sending random values**
-``
+
+```
 #include <ESP8266WiFi.h>
 #include "AdafruitIO_WiFi.h"
  
@@ -42,7 +43,7 @@ AdafruitIO_Feed * firedetector = io.feed("xxxxx");
 
 void setup() 
 {
-  // Enable the serial port so we can see updates
+  // Enable the serial port so we can see updates 
   Serial.begin(115200);
  
   // Connect to Adafruit IO
