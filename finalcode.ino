@@ -1,3 +1,8 @@
+//This code is owned bby Aron Ayub, 6/2023.
+//I'ts open source and anyone can use it.
+//Lol, if you would like to buy Him coffee, use his papal, ayubaron128@gmail.com
+//Be careful when dealing with AC power.
+
 #include <ESP8266WiFi.h>
 #include "AdafruitIO_WiFi.h"
 
