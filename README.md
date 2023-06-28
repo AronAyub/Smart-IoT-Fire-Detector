@@ -123,8 +123,9 @@ void loop() {
   delay(100);
 }
 ````
- This is a smart Fire Detector Project
-
+ 
+[The final Code][main_code]
 
 [def]: https://github.com/AronAyub/Smart-IoT-Fire-Detector/blob/main/Adafruit_IO_Arduino-master.zip
 [def2]: https://github.com/arduino-libraries/ArduinoHttpClient
+[main_code]: https://github.com/AronAyub/Smart-IoT-Fire-Detector/blob/main/finalcode.ino

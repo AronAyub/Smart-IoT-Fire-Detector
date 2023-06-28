@@ -93,7 +93,7 @@ void sensor() {
   {
     Serial.println("Printing Flames State................");
     Serial.println("*********FLAME DETECTED********** ");
-        digitalWrite(led, HIGH);
+    digitalWrite(led, HIGH);
     
     delay(100);
   }
