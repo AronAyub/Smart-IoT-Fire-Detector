@@ -1,4 +1,7 @@
-# Smart IoT Fire Detector
+# Smart IoT Fire Detector and Monitoring Solution
+
+<img width="1362" alt="fire" src="https://github.com/AronAyub/Smart-IoT-Fire-Detector/assets/55284959/6a75ac05-58e5-4e73-af43-739343d4e70e">
+
 ## Get the right libraries 
 - [Adafruit-Io master][def]
 - [ArduinoHtttpsClient][def2]
