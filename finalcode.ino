@@ -1,11 +1,11 @@
 #include <ESP8266WiFi.h>
 #include "AdafruitIO_WiFi.h"
 
-#define WIFI_SSID       "xxxxxxxxxxx"
-#define WIFI_PASS       "xxxxxxxxxxxxx."
+#define WIFI_SSID       "WhatsApp for net 0765909567"
+#define WIFI_PASS       "magic123."
 
-#define IO_USERNAME    "xxxxxxxxxxxxxxxx"
-#define IO_KEY         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#define IO_USERNAME    "AA001"
+#define IO_KEY         "aio_APMG20ILzp2Osj44e8fsjDzZdOLN"
 
 // Connect to Wi-Fi and Adafruit IO handel
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
@@ -76,28 +76,51 @@ void sensor() {
 
 
   // Checks if it has reached the threshold value
+  if (smokie == 1)
+  {
+    Serial.println("Printing Smoke State................");
+    Serial.println("*********SMOKE DETECTED*********** ");
+    digitalWrite(led, HIGH);
+    delay(100);
+  }
+
+  if (smokie == 0)
+  {
+    Serial.println("No Smoke ******");
+    delay(100);
+  }
+  if (percentage < 70)
+  {
+    Serial.println("Printing Flames State................");
+    Serial.println("*********FLAME DETECTED********** ");
+        digitalWrite(led, HIGH);
+    
+    delay(100);
+  }
+  if (percentage > 70)
+  {
+    Serial.println("Printing Flames State................");
+    Serial.println("No Flames detected*********** ");
+    delay(100);
+  }
   if (smokie == 1 && percentage < 70)
   {
-    Serial.println("Its 1");
+    Serial.println("Smoke and Flames Detected, critical!");
     delay(100);
     digitalWrite(led, HIGH);
     digitalWrite(buzzer, HIGH);
-
-    // tone(buzzer, 1000, 200);
   }
+
   if (smokie == 0 && percentage > 76)
+
   {
-    Serial.println("ITs 0");
+    Serial.println("No Smoke & No Flames, ******* ");
+    Serial.println("YOU ARE SAFE**");
     delay(100);
     digitalWrite(led, LOW);
     digitalWrite(buzzer, LOW);
-
-    ///noTone(buzzer);
   }
 
-
-
-  //buzz();
 
   // Print the percentage value
 
@@ -110,7 +133,7 @@ void sensor() {
     Serial.print("Percentage: ");
     Serial.println(percentage);
 
-    Serial.print("State: ");
+    Serial.print("State Sent is***: ");
     Serial.println(smokie);
     //Serial.println(smokie);
     previousTime = millis();
@@ -140,5 +163,3 @@ void buzz()
   }
   delay(1000);
 }
-
-
